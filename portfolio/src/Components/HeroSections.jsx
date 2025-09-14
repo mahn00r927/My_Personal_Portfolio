@@ -5,17 +5,28 @@ import {
   FaInstagram,
   FaFacebookF,
   FaWhatsapp,
+  FaEnvelope,
 } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 
 const HeroBanner = () => {
   return (
-    <section className="w-screen h-screen flex overflow-hidden">
+    <section className="w-screen h-screen flex overflow-hidden" id="home">
       {/* Left Sidebar */}
       <div className="hidden lg:flex flex-col items-center justify-center w-12 hover:w-16 transition-all duration-300  text-white text-lg space-y-6">
+        <a
+        href="mailto:mahnoor.rajput11927@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-blue-600"
+      >
+        <FaEnvelope />
+      </a>
         {/* Linkedin */}
         <a
-          href="#"
+          href="https://www.linkedin.com/in/mahnoor-rajput-muhammad-rasheed-89101a373/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-800 transition"
         >
           <FaLinkedinIn />
@@ -23,7 +34,9 @@ const HeroBanner = () => {
 
         {/* Instagram */}
         <a
-          href="#"
+          href="https://www.instagram.com/mahnoor.rasheed.773?igsh=MXEweTJvNHF2N3hndA==/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-800 transition"
         >
           <FaInstagram />
@@ -31,7 +44,9 @@ const HeroBanner = () => {
 
         {/* Facebook */}
         <a
-          href="#"
+          href="https://www.facebook.com/share/1MBZwSRpjo/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-800 transition"
         >
           <FaFacebookF />
@@ -39,7 +54,7 @@ const HeroBanner = () => {
 
         {/* WhatsApp */}
         <a
-          href="#"
+          href="https://wa.me/923173322610"
           className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-800 transition"
         >
           <FaWhatsapp />
@@ -47,7 +62,7 @@ const HeroBanner = () => {
 
         {/* Call */}
         <a
-          href="tel:+923001234567"
+          href="tel:03173322610"
           className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-800 transition"
         >
           <FiPhone />
@@ -77,22 +92,20 @@ const HeroBanner = () => {
               <Link
                 to="about"
                 smooth={true}
-                duration={600} 
-                offset={-50} 
+                duration={600}
+                offset={-50}
                 className="bg-[#f0593e] !text-white px-6 py-3 rounded-lg shadow hover:bg-red-700 transition font-medium"
-              
               >
                 About Me
               </Link>
-               <Link
+              <Link
                 to="projects"
                 smooth={true}
-                duration={600} 
-                offset={-50} 
+                duration={600}
+                offset={-50}
                 className="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-600 hover:!text-white transition font-medium"
-              
               >
-               My Work
+                My Work
               </Link>
             </div>
           </div>

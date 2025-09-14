@@ -3,7 +3,7 @@ import { FaLaptopCode, FaServer, FaPaintBrush, FaMobileAlt } from "react-icons/f
 
 const Services = () => {
   return (
-    <section className="w-screen min-h-screen bg-gray-50 text-gray-900 flex items-center px-8 lg:px-20 py-20">
+    <section className="w-screen min-h-screen bg-gray-50 text-gray-900 flex items-center px-8 lg:px-20 py-20" id="services">
       <div className="w-full text-center">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-6">

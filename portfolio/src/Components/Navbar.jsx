@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const links = ["Home", "About", "Portfolio", "Contact"];
+  const links = ["Home", "About", "Services", "Contact"];
 
   return (
     <nav className="fixed w-full top-0 left-0 z-50 bg-white shadow-md">
@@ -28,13 +28,14 @@ export default function Navbar() {
             ))}
           </div>
 
-          <button
-            className={`hidden md:inline-block !bg-[#f0593e] text-white px-5 py-2 rounded-md font-semibold shadow hover:!bg-red-600 transition ${
+          <a
+            href="#contact"
+            className={`hidden md:inline-block !bg-[#f0593e] !text-white px-5 py-2 rounded-md font-semibold shadow hover:!bg-red-600 transition ${
               isOpen ? "hidden" : ""
             }`}
           >
             Hire Me
-          </button>
+          </a>
 
           <div className="md:hidden">
             <button

@@ -27,7 +27,7 @@ const About = () => {
               Mahnoor Rajput
             </span>
             , a passionate{" "}
-            <span className="font-semibold">Full Stack Developer</span>
+            <span className="font-semibold">Full Stack Developer </span>
             who loves crafting clean, modern, and user-friendly web
             applications. I focus on writing scalable code and building smooth
             user experiences that blend functionality with design.

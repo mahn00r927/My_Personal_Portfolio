@@ -16,7 +16,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 p-8 flex items-center justify-center">
+    <div className="min-h-screen bg-white text-gray-900 p-8 flex items-center justify-center" id="contact">
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl w-full">
         {/* Left Info Section */}
         <motion.div

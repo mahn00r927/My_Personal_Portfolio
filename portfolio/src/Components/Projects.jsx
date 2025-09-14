@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ShoppingCart, Code, Scissors } from "lucide-react"; // Replace Fabric with Scissors
-
+import { FaQuestionCircle } from "react-icons/fa";
 export default function Projects() {
   const projects = [
     {
@@ -10,17 +10,17 @@ export default function Projects() {
       link: "#",
     },
     {
-      title: "Portfolio Website",
-      desc: "A personal portfolio built using React, Tailwind CSS, and Framer Motion.",
-      icon: <Code className="w-8 h-8 text-indigo-600" />,
-      link: "#",
-    },
-    {
       title: "Dream Tailors & Fabrics",
       desc: "A responsive e-commerce platform for custom clothing and fabrics.",
       icon: <Scissors className="w-8 h-8 text-indigo-600" />,
       link: "#",
     },
+     {
+    title: "Online Quiz Application",
+    desc: "A responsive web application for creating and attempting quizzes.",
+    icon: <FaQuestionCircle className="w-8 h-8 text-indigo-600" />,
+    link: "#",
+  },
   ];
 
   return (

@@ -34,7 +34,7 @@ export default function Navbar() {
               isOpen ? "hidden" : ""
             }`}
           >
-            Hire Me
+            Let's Connect
           </a>
 
           <div className="md:hidden">
@@ -72,7 +72,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="!bg-[#f0593e] text-white px-5 py-2 rounded-md font-semibold shadow hover:bg-red-600 transition text-center"
           >
-            Hire Me
+            Let's Connect
           </a>
         </div>
       </div>

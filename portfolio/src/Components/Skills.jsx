@@ -9,19 +9,51 @@ import {
   FaDatabase,
   FaFigma,
 } from "react-icons/fa";
-import { SiRedux, SiExpress, SiMongodb, SiTailwindcss, SiPostman } from "react-icons/si";
+import {
+  SiRedux,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiPostman,
+} from "react-icons/si";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.3 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 const Skills = () => {
   return (
     <section id="skills" className="w-screen bg-white py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">
+        {/* Heading */}
+        <motion.h2
+          className="text-4xl font-bold text-gray-900 mb-12"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           My <span className="text-indigo-600">Skills</span>
-        </h2>
+        </motion.h2>
 
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 text-left">
+        {/* Skills Grid */}
+        <motion.div
+          className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 text-left"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+        >
           {/* Frontend */}
-          <div>
+          <motion.div variants={cardVariants}>
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Frontend Development
             </h3>
@@ -45,10 +77,10 @@ const Skills = () => {
                 <SiTailwindcss className="text-cyan-500" /> Tailwind CSS
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Backend */}
-          <div>
+          <motion.div variants={cardVariants}>
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Backend Development
             </h3>
@@ -62,12 +94,14 @@ const Skills = () => {
               <li className="flex items-center gap-2">
                 <SiPostman className="text-orange-500" /> REST APIs / Postman
               </li>
-              <li className="flex items-center gap-2">Authentication (JWT, OAuth)</li>
+              <li className="flex items-center gap-2">
+                Authentication (JWT, OAuth)
+              </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Database */}
-          <div>
+          <motion.div variants={cardVariants}>
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Database Management
             </h3>
@@ -76,14 +110,16 @@ const Skills = () => {
                 <SiMongodb className="text-green-700" /> MongoDB / Mongoose
               </li>
               <li className="flex items-center gap-2">
-                <FaDatabase className="text-gray-600" /> SQL 
+                <FaDatabase className="text-gray-600" /> SQL
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          {/* Tools / Design */}
-          <div>
-            <h3 className="text-xl font-semibold text-indigo-600 mb-4">Tools & Design</h3>
+          {/* Tools */}
+          <motion.div variants={cardVariants}>
+            <h3 className="text-xl font-semibold text-indigo-600 mb-4">
+              Tools & Design
+            </h3>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-center gap-2">
                 <FaGitAlt className="text-red-600" /> Git / GitHub
@@ -92,10 +128,9 @@ const Skills = () => {
                 <FaFigma className="text-pink-500" /> Figma / Adobe XD
               </li>
               <li className="flex items-center gap-2">Responsive Design</li>
-              
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

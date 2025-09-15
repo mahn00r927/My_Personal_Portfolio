@@ -15,8 +15,21 @@ export default function ContactPage() {
     setForm({ name: "", email: "", message: "" });
   };
 
+  // Animations
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6 },
+    }),
+  };
+
   return (
-    <div className="min-h-screen bg-white text-gray-900 p-8 flex items-center justify-center" id="contact">
+    <div
+      className="min-h-screen bg-white text-gray-900 p-8 flex items-center justify-center"
+      id="contact"
+    >
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl w-full">
         {/* Left Info Section */}
         <motion.div
@@ -25,27 +38,55 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <h1 className="text-4xl font-bold">
+          <motion.h1
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            custom={0}
+            className="text-4xl font-bold"
+          >
             Get in <span className="text-indigo-600">Touch</span>
-          </h1>
-          <p className="text-gray-600">
-            Let’s collaborate on something great! Whether you have a project, an idea, 
-            or just want to connect, feel free to drop me a message.
-          </p>
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
+          </motion.h1>
+          <motion.p
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            custom={1}
+            className="text-gray-600"
+          >
+            Let’s collaborate on something great! Whether you have a project, an
+            idea, or just want to connect, feel free to drop me a message.
+          </motion.p>
+
+          <motion.div
+            className="space-y-4"
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            custom={2}
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-3"
+            >
               <Mail className="text-indigo-600 w-6 h-6" />
               <span>mahnoor.rajput11927@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-3">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-3"
+            >
               <Phone className="text-indigo-600 w-6 h-6" />
               <span>0317 3322610</span>
-            </div>
-            <div className="flex items-center gap-3">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-3"
+            >
               <MapPin className="text-indigo-600 w-6 h-6" />
               <span>Sukkur, Pakistan</span>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
 
         {/* Right Form Section */}
@@ -54,9 +95,12 @@ export default function ContactPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="bg-gray-50 rounded-2xl shadow-lg p-6 border border-gray-200">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-gray-50 rounded-2xl shadow-lg p-6 border border-gray-200"
+          >
             <form onSubmit={handleSubmit} className="space-y-4">
-              <input
+              <motion.input
                 type="text"
                 placeholder="Your Name"
                 name="name"
@@ -64,8 +108,9 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 className="w-full p-3 rounded-lg border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none"
+                whileFocus={{ scale: 1.01 }}
               />
-              <input
+              <motion.input
                 type="email"
                 placeholder="Your Email"
                 name="email"
@@ -73,8 +118,9 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 className="w-full p-3 rounded-lg border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none"
+                whileFocus={{ scale: 1.01 }}
               />
-              <textarea
+              <motion.textarea
                 placeholder="Your Message"
                 name="message"
                 value={form.message}
@@ -82,15 +128,18 @@ export default function ContactPage() {
                 rows={5}
                 required
                 className="w-full p-3 rounded-lg border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none"
+                whileFocus={{ scale: 1.01 }}
               />
-              <button
+              <motion.button
                 type="submit"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="w-full py-3 rounded-lg !bg-[#f0593e] text-white font-semibold hover:!bg-red-700 transition"
               >
                 Send Message
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>

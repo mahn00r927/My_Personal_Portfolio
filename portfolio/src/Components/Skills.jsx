@@ -53,7 +53,10 @@ const Skills = () => {
           whileInView="visible"
         >
           {/* Frontend */}
-          <motion.div variants={cardVariants} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105">
+          <motion.div
+            variants={cardVariants}
+            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105"
+          >
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Frontend Development
             </h3>
@@ -80,7 +83,10 @@ const Skills = () => {
           </motion.div>
 
           {/* Backend */}
-          <motion.div variants={cardVariants} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105">
+          <motion.div
+            variants={cardVariants}
+            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105"
+          >
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Backend Development
             </h3>
@@ -101,7 +107,10 @@ const Skills = () => {
           </motion.div>
 
           {/* Database */}
-          <motion.div variants={cardVariants} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105">
+          <motion.div
+            variants={cardVariants}
+            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105"
+          >
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Database Management
             </h3>
@@ -116,7 +125,10 @@ const Skills = () => {
           </motion.div>
 
           {/* Tools */}
-          <motion.div variants={cardVariants} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105">
+          <motion.div
+            variants={cardVariants}
+            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105"
+          >
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Tools & Design
             </h3>
@@ -128,6 +140,29 @@ const Skills = () => {
                 <FaFigma className="text-pink-500" /> Figma / Adobe XD
               </li>
               <li className="flex items-center gap-2">Responsive Design</li>
+            </ul>
+          </motion.div>
+          {/* AI & Machine Learning */}
+          <motion.div
+            variants={cardVariants}
+            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105"
+          >
+            <h3 className="text-xl font-semibold text-indigo-600 mb-4">
+              AI & Machine Learning
+            </h3>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-center gap-2">
+                🧠 Python 
+              </li>
+              <li className="flex items-center gap-2">
+                🤖 Scikit-learn / Decision Trees
+              </li>
+              <li className="flex items-center gap-2">
+                🔬 Data Preprocessing & Feature Engineering
+              </li>
+              <li className="flex items-center gap-2">
+                📊 Model Training & Evaluation
+              </li>
             </ul>
           </motion.div>
         </motion.div>

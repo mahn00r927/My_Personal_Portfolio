@@ -76,7 +76,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="bg-[#f0593e] text-white px-5 py-2 rounded-md font-semibold shadow hover:bg-red-600 transition text-center"
+              className="bg-[#f0593e] text-white h-10 text-xs w-full px-5 py-2 rounded-md font-semibold shadow hover:bg-red-600 transition text-center"
             >
               Let's Connect
             </a>

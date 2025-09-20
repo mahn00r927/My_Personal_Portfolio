@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import image from '../pic/image.png'
-import tailoring from '../pic/tailor2.png'
-import quiz from '../pic/quiz.png'
-import tictactoe from '../pic/tictactoe.png'
+import image from "../pic/image.png";
+import tailoring from "../pic/tailor2.png";
+import quiz from "../pic/quiz.png";
+import tictactoe from "../pic/tictactoe.png";
+import game from "../pic/game.jpeg";
 const projects = [
   {
     title: "PharmaCart (MERN)",
@@ -22,15 +23,22 @@ const projects = [
     title: "Online Quiz Application",
     desc: "A responsive web application for creating and attempting quizzes.",
     image: quiz,
-    tech: ["React", "HTML", "CSS" , "JavaScript"],
+    tech: ["React", "HTML", "CSS", "JavaScript"],
     link: "#",
   },
-   {
+  {
     title: "Tic Tac Toe Game",
     desc: "A simple JavaScript-based Tic Tac Toe game with winner detection.",
-    image: tictactoe, 
+    image: tictactoe,
     tech: ["HTML", "CSS", "JavaScript"],
-    link: "#", 
+    link: "#",
+  },
+  {
+    title: "AI Personality Guessing Game",
+    desc: "A Python-based AI game that guesses personalities using a decision tree.",
+    image: game,
+    tech: ["Python", "Flask", "scikit-learn"],
+    link: "#",
   },
 ];
 
@@ -56,7 +64,7 @@ export default function ProjectsSection() {
         </motion.div>
 
         {/* Project Cards */}
-       <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {projects.map((project, i) => (
             <motion.div
               key={i}

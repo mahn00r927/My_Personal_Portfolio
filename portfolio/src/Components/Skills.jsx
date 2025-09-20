@@ -47,13 +47,13 @@ const Skills = () => {
 
         {/* Skills Grid */}
         <motion.div
-          className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 text-left"
+          className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 text-left"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
         >
           {/* Frontend */}
-          <motion.div variants={cardVariants}>
+          <motion.div variants={cardVariants} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105">
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Frontend Development
             </h3>
@@ -80,7 +80,7 @@ const Skills = () => {
           </motion.div>
 
           {/* Backend */}
-          <motion.div variants={cardVariants}>
+          <motion.div variants={cardVariants} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105">
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Backend Development
             </h3>
@@ -101,7 +101,7 @@ const Skills = () => {
           </motion.div>
 
           {/* Database */}
-          <motion.div variants={cardVariants}>
+          <motion.div variants={cardVariants} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105">
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Database Management
             </h3>
@@ -116,7 +116,7 @@ const Skills = () => {
           </motion.div>
 
           {/* Tools */}
-          <motion.div variants={cardVariants}>
+          <motion.div variants={cardVariants} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition hover:scale-105">
             <h3 className="text-xl font-semibold text-indigo-600 mb-4">
               Tools & Design
             </h3>
